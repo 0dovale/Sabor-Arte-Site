@@ -1,12 +1,8 @@
 # Sabor-Arte-Site
 
-----------------------------------------
-
 ---IA usada para a construção do site:
 "v0"
 "https://v0.app/"
-
-----------------------------------------
 
 ---Prompt usado para a construção do site:
 
@@ -78,5 +74,3 @@ Idioma:
 Um seletor de idiomas (ex: Português / Inglês) para atender a um público mais amplo.
 
 Este prompt agora abrange a criação de um site completo, mantendo a estética sofisticada e adicionando funcionalidades de personalização para melhorar a experiência de todos os usuários."
-
-----------------------------------------
