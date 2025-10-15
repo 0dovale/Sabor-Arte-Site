@@ -1,8 +1,6 @@
 # Sabor-Arte-Site
 
----IA usada para a construção do site:
-"v0"
-"https://v0.app/"
+---IA usada para a construção do site: (v0 - https://v0.app/)
 
 ---Prompt usado para a construção do site:
 
