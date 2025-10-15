@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Sabor Arte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    
+    <button class="settings-btn" id="settings-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m0-18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2zM4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+        </svg>
+    </button>
+
+    <div id="settings-panel" class="settings-panel">
+        <div class="settings-content">
+            <button class="settings-close" id="settings-close">&times;</button>
+            <h2>Configurações</h2>
+            
+            <div class="settings-section">
+                <h3>Tema</h3>
+                <div class="theme-selector">
+                    <button class="theme-btn active" data-theme="dark">Escuro</button>
+                    <button class="theme-btn" data-theme="light">Claro</button>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Acessibilidade</h3>
+                <button class="accessibility-btn" id="increase-font">Aumentar Fonte</button>
+                <button class="accessibility-btn" id="high-contrast">Alto Contraste</button>
+            </div>
+
+            <div class="settings-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+                <p class="newsletter-message" id="newsletter-message"></p>
+            </div>
+
+            <div class="settings-section">
+                <h3>Idioma</h3>
+                <select id="language-selector">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sabor Arte</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="galeria.html" class="active">Galeria</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="reservas.html" class="btn-reserve">Reservar Mesa</a>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Galeria</h1>
+        <p>Momentos que capturam a essência do Sabor Arte</p>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato1.jpg" alt="Prato 1">
+                    <div class="gallery-overlay">
+                        <h3>Arte no Prato</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato2.jpg" alt="Ambiente 1">
+                    <div class="gallery-overlay">
+                        <h3>Ambiente Sofisticado</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato3.jpg" alt="Chef 1">
+                    <div class="gallery-overlay">
+                        <h3>Maestria Culinária</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato4.jpg" alt="Prato 2">
+                    <div class="gallery-overlay">
+                        <h3>Frutos do Mar</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato5.jpg" alt="Adega">
+                    <div class="gallery-overlay">
+                        <h3>Adega Premium</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato6.jpg" alt="Sobremesa">
+                    <div class="gallery-overlay">
+                        <h3>Doces Tentações</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato7.jpg" alt="Bar">
+                    <div class="gallery-overlay">
+                        <h3>Bar de Coquetéis</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato8.jpg" alt="Prato 3">
+                    <div class="gallery-overlay">
+                        <h3>Carnes Nobres</h3>
+                    </div>
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img src="images/prato9.jpg" alt="Sala Privativa">
+                    <div class="gallery-overlay">
+                        <h3>Sala Privativa</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sabor Arte</h3>
+                    <p>Alta gastronomia que transcende o seu paladar!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cardapio.html">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>Rua Gourmet, 123</li>
+                        <li>Pérola - PR</li>
+                        <li>(44) 1234-5678</li>
+                        <li>contato@saborarte.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Horários</h4>
+                    <ul>
+                        <li>Terça a Sábado: 19h - 00h</li>
+                        <li>Domingo e Segunda: 12h - 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabor Arte. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

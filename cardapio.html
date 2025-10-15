@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Sabor Arte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    
+    <button class="settings-btn" id="settings-btn">
+        <svg width="24" height="24" viewBox="0</button> 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m0-18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2zM4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+        </svg>
+    </button>
+
+    <div id="settings-panel" class="settings-panel">
+        <div class="settings-content">
+            <button class="settings-close" id="settings-close">&times;</button>
+            <h2>Configurações</h2>
+            
+            <div class="settings-section">
+                <h3>Tema</h3>
+                <div class="theme-selector">
+                    <button class="theme-btn active" data-theme="dark">Escuro</button>
+                    <button class="theme-btn" data-theme="light">Claro</button>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Acessibilidade</h3>
+                <button class="accessibility-btn" id="increase-font">Aumentar Fonte</button>
+                <button class="accessibility-btn" id="high-contrast">Alto Contraste</button>
+            </div>
+
+            <div class="settings-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+                <p class="newsletter-message" id="newsletter-message"></p>
+            </div>
+
+            <div class="settings-section">
+                <h3>Idioma</h3>
+                <select id="language-selector">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sabor Arte</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="reservas.html" class="btn-reserve">Reservar Mesa</a>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Nosso Cardápio</h1>
+        <p>Uma jornada gastronômica inesquecível</p>
+    </section>
+
+    <section class="menu-filters">
+        <div class="container">
+            <div class="filter-categories">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="entradas">Entradas</button>
+                <button class="filter-btn" data-category="principais">Pratos Principais</button>
+                <button class="filter-btn" data-category="sobremesas">Sobremesas</button>
+                <button class="filter-btn" data-category="bebidas">Bebidas</button>
+            </div>
+            <div class="filter-dietary">
+                <button class="dietary-btn" data-filter="vegetarian">
+                    <span class="icon">🌱</span> Vegetariano
+                </button>
+                <button class="dietary-btn" data-filter="vegan">
+                    <span class="icon">🥬</span> Vegano
+                </button>
+                <button class="dietary-btn" data-filter="gluten-free">
+                    <span class="icon">🌾</span> Sem Glúten
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-grid" id="menu-grid">
+                
+                <div class="menu-card" data-category="entradas" data-dietary="gluten-free">
+                    <div class="menu-card-image">
+                        <img src="/images/carpaccio.jpg" alt="Carpaccio">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Carpaccio de Filé Mignon</h3>
+                        <p class="menu-description">Finas fatias de filé mignon com rúcula, parmesão e molho de mostarda Dijon.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Sem Glúten</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 78,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="entradas" data-dietary="vegetarian">
+                    <div class="menu-card-image">
+                        <img src="/images/burrata.jpg" alt="Burrata">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Burrata com Tomates Confitados</h3>
+                        <p class="menu-description">Burrata artesanal com tomates cereja confitados, manjericão fresco e redução balsâmica.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Vegetariano</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 65,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="entradas">
+                    <div class="menu-card-image">
+                        <img src="/images/oysters.jpg" alt="Ostras">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Ostras Frescas</h3>
+                        <p class="menu-description">Seleção de ostras frescas servidas no gelo com limão siciliano e molho mignonette.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Sem Glúten</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 95,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="principais">
+                    <div class="menu-card-image">
+                        <img src="/images/lobster_risotto.jpg" alt="Risoto">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Risoto de Lagosta</h3>
+                        <p class="menu-description">Arroz arbóreo cremoso com lagosta fresca, açafrão e finalizado com manteiga trufada.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Sem Glúten</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 195,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="principais">
+                    <div class="menu-card-image">
+                        <img src="/images/beef_wellington.jpg" alt="Wellington">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Filé Wellington</h3>
+                        <p class="menu-description">Filé mignon envolto em massa folhada com duxelles de cogumelos e foie gras.</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 220,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="principais" data-dietary="gluten-free">
+                    <div class="menu-card-image">
+                        <img src="/images/grilled_salmon.jpg" alt="Salmão">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Salmão Grelhado</h3>
+                        <p class="menu-description">Salmão selvagem grelhado com crosta de ervas, legumes assados e molho de maracujá.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Sem Glúten</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 165,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="sobremesas" data-dietary="vegetarian">
+                    <div class="menu-card-image">
+                        <img src="/images/chocolate_sphere.jpg" alt="Esfera">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Esfera de Chocolate</h3>
+                        <p class="menu-description">Sobremesa interativa com chocolate belga 70%, recheio de frutas vermelhas e sorvete.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Vegetariano</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 68,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="sobremesas" data-dietary="vegetarian">
+                    <div class="menu-card-image">
+                        <img src="/images/creme_brulee.jpg" alt="Crème Brûlée">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Crème Brûlée</h3>
+                        <p class="menu-description">Creme de baunilha Madagascar com crosta caramelizada e frutas vermelhas frescas.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Vegetariano</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 52,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="sobremesas" data-dietary="vegan gluten-free">
+                    <div class="menu-card-image">
+                        <img src="/images/sorbets.jpg" alt="Sorbet">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Trio de Sorbets</h3>
+                        <p class="menu-description">Seleção de sorbets artesanais de frutas tropicais com hortelã fresca.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Vegano</span>
+                            <span class="tag">Sem Glúten</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 45,00</span>
+                            <button class="btn-harmonize">🍷 Harmonizar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="bebidas">
+                    <div class="menu-card-image">
+                        <img src="/images/red_wine.jpg" alt="Vinho Tinto">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Château Margaux 2015</h3>
+                        <p class="menu-description">Vinho tinto francês de Bordeaux, corpo médio com notas de frutas vermelhas e especiarias.</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 1.850,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="bebidas">
+                    <div class="menu-card-image">
+                        <img src="/images/champagne.jpg" alt="Champagne">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Dom Pérignon Vintage</h3>
+                        <p class="menu-description">Champagne francês premium com notas de frutas brancas e brioche.</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 2.200,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="bebidas" data-dietary="vegan">
+                    <div class="menu-card-image">
+                        <img src="/images/fresh_juice.jpg" alt="Suco">
+                        <div class="menu-card-overlay">
+                            <button class="btn-view-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Suco Natural Premium</h3>
+                        <p class="menu-description">Seleção de sucos naturais prensados a frio com frutas orgânicas.</p>
+                        <div class="menu-tags">
+                            <span class="tag">Vegano</span>
+                        </div>
+                        <div class="menu-footer">
+                            <span class="menu-price">R$ 28,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="dish-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <img src="/placeholder.svg" alt="" id="modal-image">
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <div class="modal-details">
+                        <h3>Informações Nutricionais</h3>
+                        <p>Calorias: 450 kcal | Proteínas: 35g | Carboidratos: 25g</p>
+                        <h3>Alergênicos</h3>
+                        <p>Contém: Glúten, Laticínios</p>
+                        <h3>Harmonização Sugerida</h3>
+                        <p>Vinho Tinto Malbec ou Cabernet Sauvignon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sabor Arte</h3>
+                    <p>Alta gastronomia que transcende o seu paladar!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cardapio.html">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>Rua Gourmet, 123</li>
+                        <li>Pérola - PR</li>
+                        <li>(44) 1234-5678</li>
+                        <li>contato@saborarte.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Horários</h4>
+                    <ul>
+                        <li>Terça a Sábado: 19h - 00h</li>
+                        <li>Domingo e Segunda: 12h - 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabor Arte. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

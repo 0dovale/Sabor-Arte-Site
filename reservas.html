@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Sabor Arte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    
+    <button class="settings-btn" id="settings-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m0-18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2zM4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+        </svg>
+    </button>
+
+    <div id="settings-panel" class="settings-panel">
+        <div class="settings-content">
+            <button class="settings-close" id="settings-close">&times;</button>
+            <h2>Configurações</h2>
+            
+            <div class="settings-section">
+                <h3>Tema</h3>
+                <div class="theme-selector">
+                    <button class="theme-btn active" data-theme="dark">Escuro</button>
+                    <button class="theme-btn" data-theme="light">Claro</button>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Acessibilidade</h3>
+                <button class="accessibility-btn" id="increase-font">Aumentar Fonte</button>
+                <button class="accessibility-btn" id="high-contrast">Alto Contraste</button>
+            </div>
+
+            <div class="settings-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+                <p class="newsletter-message" id="newsletter-message"></p>
+            </div>
+
+            <div class="settings-section">
+                <h3>Idioma</h3>
+                <select id="language-selector">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sabor Arte</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="reservas.html" class="active">Reservas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="reservas.html" class="btn-reserve">Reservar Mesa</a>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Faça sua Reserva</h1>
+        <p>Garanta seu lugar em uma experiência gastronômica única!!!</p>
+    </section>
+
+    <section class="reservation-section">
+        <div class="container">
+            <div class="reservation-content">
+                <div class="reservation-form-container scroll-reveal">
+                    <form id="reservation-form" class="reservation-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Data</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Horário</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Selecione</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="21:30">21:30</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="22:00">23:00</option>
+                                    <option value="22:00">00:00</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">Número de Pessoas</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Selecione</option>
+                                <option value="1">1 pessoa</option>
+                                <option value="2">2 pessoas</option>
+                                <option value="3">3 pessoas</option>
+                                <option value="4">4 pessoas</option>
+                                <option value="5">5 pessoas</option>
+                                <option value="6">6 pessoas</option>
+                                <option value="7+">7+ pessoas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="occasion">Ocasião Especial (Opcional)</label>
+                            <select id="occasion" name="occasion">
+                                <option value="">Selecione</option>
+                                <option value="aniversario">Aniversário</option>
+                                <option value="aniversario-casamento">Aniversário de Casamento</option>
+                                <option value="pedido-casamento">Pedido de Casamento</option>
+                                <option value="negocios">Jantar de Negócios</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Observações (Opcional)</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Restrições alimentares, preferências de mesa, etc."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Confirmar Reserva</button>
+                    </form>
+                    <div id="reservation-success" class="reservation-success" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Reserva Confirmada!</h3>
+                        <p>Enviamos um e-mail de confirmação com todos os detalhes da sua reserva.</p>
+                        <button class="btn-primary" onclick="location.reload()">Nova Reserva</button>
+                    </div>
+                </div>
+
+                <div class="reservation-info scroll-reveal">
+                    <h3>Informações Importantes</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📅</span>
+                        <div>
+                            <h4>Horários de Funcionamento</h4>
+                            <p>Terça a Sábado: 19h - 00h<br>Domingo/Segunda: 12h - 18h</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">👔</span>
+                        <div>
+                            <h4>Dress Code</h4>
+                            <p>Traje social ou esporte fino</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <h4>Política de Cancelamento</h4>
+                            <p>Cancelamentos devem ser feitos com até 24h de antecedência</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🎂</span>
+                        <div>
+                            <h4>Ocasiões Especiais</h4>
+                            <p>Informe-nos sobre aniversários ou celebrações para tornar sua experiência ainda mais especial</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div>
+                            <h4>Contato Direto</h4>
+                            <p>Para grupos acima de 7 pessoas, entre em contato pelo telefone (44) 3456-7890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sabor Arte</h3>
+                    <p>Alta gastronomia que transcende o seu paladar!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cardapio.html">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>Rua Gourmet, 123</li>
+                        <li>Pérola - PR</li>
+                        <li>(44) 1234-5678</li>
+                        <li>contato@saborarte.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Horários</h4>
+                    <ul>
+                        <li>Terça a Sábado: 19h - 00h</li>
+                        <li>Domingo e Segunda: 12h - 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabor Arte. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

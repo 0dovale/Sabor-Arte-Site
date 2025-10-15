@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Sabor Arte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+    
+    <button class="settings-btn" id="settings-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m0-18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2zM4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24"></path>
+        </svg>
+    </button>
+
+    <div id="settings-panel" class="settings-panel">
+        <div class="settings-content">
+            <button class="settings-close" id="settings-close">&times;</button>
+            <h2>Configurações</h2>
+            
+            <div class="settings-section">
+                <h3>Tema</h3>
+                <div class="theme-selector">
+                    <button class="theme-btn active" data-theme="dark">Escuro</button>
+                    <button class="theme-btn" data-theme="light">Claro</button>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Acessibilidade</h3>
+                <button class="accessibility-btn" id="increase-font">Aumentar Fonte</button>
+                <button class="accessibility-btn" id="high-contrast">Alto Contraste</button>
+            </div>
+
+            <div class="settings-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+                <p class="newsletter-message" id="newsletter-message"></p>
+            </div>
+
+            <div class="settings-section">
+                <h3>Idioma</h3>
+                <select id="language-selector">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sabor Arte</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="sobre.html" class="active">Sobre Nós</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="reservas.html" class="btn-reserve">Reservar Mesa</a>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Nossa História</h1>
+        <p>A arte de transformar ingredientes em experiências memoráveis</p>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content scroll-reveal">
+                <div class="about-text">
+                    <h2>Bem-vindo ao Sabor Arte</h2>
+                    <p>Fundado em 2015, o Sabor Arte nasceu do sonho de criar um espaço onde a gastronomia transcende o simples ato de alimentar-se, transformando cada refeição em uma experiência artística e sensorial única.</p>
+                    <p>Nossa filosofia é simples: respeitar os ingredientes, honrar as técnicas tradicionais e inovar com criatividade. Cada prato que sai de nossa cozinha é uma obra de arte cuidadosamente elaborada, que conta uma história e desperta emoções.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/images/restaurant.png" alt="Restaurante">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="chef-section">
+        <div class="container">
+            <div class="chef-content scroll-reveal">
+                <div class="chef-image">
+                    <img src="/images/chef.png" alt="Chef">
+                </div>
+                <div class="chef-text">
+                    <h2>Chef Alexandre Ferreira</h2>
+                    <h3>Chef Executivo e Fundador</h3>
+                    <p>Com mais de 20 anos de experiência em cozinhas renomadas ao redor do mundo, o Chef Alexandre Ferreira traz ao Sabor Arte uma visão única que combina técnicas clássicas francesas com a riqueza dos ingredientes brasileiros.</p>
+                    <p>Formado pelo Le Cordon Bleu em Paris e com passagens por restaurantes estrelados na França, Espanha e Itália, Alexandre retornou ao Brasil com a missão de elevar a gastronomia nacional a novos patamares de excelência.</p>
+                    <div class="chef-awards">
+                        <div class="award">
+                            <span class="award-icon">⭐</span>
+                            <p>Estrela Michelin 2022</p>
+                        </div>
+                        <div class="award">
+                            <span class="award-icon">🏆</span>
+                            <p>Melhor Chef 2023</p>
+                        </div>
+                        <div class="award">
+                            <span class="award-icon">📖</span>
+                            <p>Autor de 3 livros</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy-section">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Nossa Filosofia</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-card scroll-reveal">
+                    <div class="philosophy-icon">🌿</div>
+                    <h3>Ingredientes Selecionados</h3>
+                    <p>Trabalhamos apenas com ingredientes de altíssima qualidade, selecionados diretamente de produtores locais e fornecedores internacionais de confiança.</p>
+                </div>
+                <div class="philosophy-card scroll-reveal">
+                    <div class="philosophy-icon">🎨</div>
+                    <h3>Arte no Prato</h3>
+                    <p>Cada prato é uma composição visual cuidadosamente planejada, onde cores, texturas e formas se harmonizam para criar uma experiência estética única.</p>
+                </div>
+                <div class="philosophy-card scroll-reveal">
+                    <div class="philosophy-icon">♻️</div>
+                    <h3>Sustentabilidade</h3>
+                    <p>Comprometidos com práticas sustentáveis, priorizamos ingredientes orgânicos, reduzimos desperdícios e apoiamos a agricultura familiar.</p>
+                </div>
+                <div class="philosophy-card scroll-reveal">
+                    <div class="philosophy-icon">❤️</div>
+                    <h3>Paixão e Dedicação</h3>
+                    <p>Nossa equipe é movida pela paixão pela gastronomia e pela dedicação em proporcionar experiências memoráveis a cada cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sabor Arte</h3>
+                    <p>Alta gastronomia que transcende o seu paladar!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cardapio.html">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>Rua Gourmet, 123</li>
+                        <li>Pérola - PR</li>
+                        <li>(44) 1234-5678</li>
+                        <li>contato@saborarte.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Horários</h4>
+                    <ul>
+                        <li>Terça a Sábado: 19h - 00h</li>
+                        <li>Domingo e Segunda: 12h - 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabor Arte. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
